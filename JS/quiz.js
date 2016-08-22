@@ -135,7 +135,7 @@ function yourParagraph() {
     sizeSentence = 'A relatively small bird, the ' + yourBird.name + 'is still fun to spot. '
   }
 
-   yourParagraph= colorSentence + sizeSentence + rareSentence + landSentence;
+   yourParagraph= colorSentence + sizeSentence + rareSentence + landSentence + '</br>';
    return yourParagraph;
  }
 
