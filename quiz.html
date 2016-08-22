@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BirdFeed</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+  </head>
+  <body>
+    <header>
+      <div class="main-header content">
+        <a href="index.html"><h1>BirdFeed</h1></a>
+        <h2>Quiz</h2>
+      </div>
+      <nav>
+        <ul class="main-nav content">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class='main-body clearfix' id="quiz-page">
+      <form method="post" id="quiz-form" class="quiz">
+        <div class="question">
+            <p>Are you more drawn to neutral, subdued colors or bright, bold colors?</p>
+            <div class="quiz-option">
+              <label for="color_neutral"><img src='Photos/neutral.jpg' alt='Bald Eagle' /></label>
+              <input type="radio" id="color_neutral" name="color_answer" value="neutral_answer" /><p>Neutral</p>
+            </div>
+            <div class="quiz-option">
+              <label for="color_colorful"> <img src="Photos/colorful.jpg"> </label>
+              <input type="radio" id="color_colorful" name="color_answer" value="colorful_answer"/><p>Colorful</p>
+            </div>
+        </div>
+        <div class="question">
+          <p>Are you tall or short?</p>
+          <div class="quiz-option">
+            <label for="size_large"><img src="Photos/tall.jpg"/></label>
+            <input type="radio" id="size_large" name="size_answer" value="tall_answer" /><p>Tall</p>
+          </div>
+          <div class="quiz-option">
+            <label for="size_small"> <img src="Photos/short.jpg" /> </label>
+            <input type="radio" id="size_small" name="size_answer" value="short_answer" /><p>Short</p>
+          </div>
+        </div>
+        <div class="question">
+          <p>Would you prefer to be hiking in a forest or swimming in a river?</p>
+            <div class="quiz-option">
+              <label for="land_land"><img src="Photos/land.jpg" /></label>
+              <input type="radio" id="land_land" name="land_answer" value="hiking_answer"/><p>Hiking</p>
+            </div>
+          <div class="quiz-option">
+            <label for="land_water"><img src="Photos/water.jpg" /></label>
+            <input type="radio" id="land_water" name="land_answer" value="swimming_answer" /><p>Swimming</p>
+          </div>
+        </div>
+        <div class="question">
+          <p>It's friday night, are you at a party or reading a book at home</p>
+          <div class="quiz-option">
+            <label for="rare_common"><img src="Photos/common.jpg"/></label>
+            <input type="radio" id="rare_common" name="rare_answer" value="false" /><p>Party</p>
+          </div>
+          <div class="quiz-option">
+            <label for="rare_rare"><img src="Photos/rare.jpg" /></label>
+            <input type="radio" id="rare_rare" name="rare_answer" value="true" /><p>Home</p>
+          </div>
+        </div>
+        <div class="button">
+            <button type="submit">Submit</button>
+            <p>Find out what type of bird you are!</p>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <p>&copy; 2016</p>
+    </footer>
+    <script src="JS/testlocalstorage.js"></script>
+
+  </body>
+</html>

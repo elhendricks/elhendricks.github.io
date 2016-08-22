@@ -1,0 +1,308 @@
+/*Basic*/
+
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Header Style*/
+header h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 4em;
+  font-weight:900;
+  color: red;
+  margin: 0;
+  padding-top: .25em;
+  padding-right: 0;
+  padding-left: 0
+  padding-bottom: .25em;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 400;
+  padding-bottom: 1em;
+}
+
+/* Navigation Style */
+
+nav {
+  background-color: #eee;
+}
+
+.main-nav {
+  margin: 0;
+  padding: 0;
+}
+.main-nav li {
+  list-style: none;
+  padding-left: .75em;
+  padding-right: .75em;
+  text-align: center;
+}
+
+
+.main-nav li a{
+  color: black;
+  font-size: 1.5em;
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+}
+.main-nav li:hover {
+  background-color: white;
+}
+
+/*main body*/
+.main-body {
+  padding-top: 1em;
+  padding-bottom: 10em;
+  height: 100%;
+}
+
+.quiz-link img {
+  max-width: 100%;
+}
+
+.quiz-link a {
+  text-decoration: none;
+  color: black;
+}
+
+.quiz-link p {
+  font-weight: 700;
+  padding-top: .5em;
+  padding-bottom: 1.75em;
+  }
+
+.sidebar {
+  float:left;
+}
+
+/*Quiz Styling*/
+#quiz-form img {
+  max-width: 100%;
+}
+.quiz p {
+  font-size: 1.5em;
+}
+
+button {
+  padding: 1em;
+  font-size: 1em;
+  font-weight: 700;
+  margin: auto;
+  background-color: #eee;
+  color: #black;
+  border-width: 0px;
+  min-width: 200px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+
+
+input, .quiz-option p {
+  display: inline-block;
+}
+.question:last-of-type {
+  margin-bottom: 2em;
+}
+
+.button {
+  margin: auto;
+  margin-top: 2em;
+}
+
+.button p {
+  display: inline-block;
+
+}
+
+.quiz .question {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.quiz .question p {
+  padding-top: .25em;
+  padding-bottom: 1em;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.quiz-option {
+  display: inline-block;
+  margin-top: .25em;
+  background-color: #ddd;
+}
+
+
+.results img {
+  max-width: 60%;
+}
+
+.profile_photo {
+  text-align: center;
+}
+.profile_photo img{
+  border-radius: 100%;
+  max-width: 200px;
+}
+
+.contact a {
+  color: red;
+  text-decoration: none;
+}
+
+.contact li {
+  list-style: none;
+}
+
+
+
+/*Footer Style*/
+
+footer {
+  background: red;
+  padding: 2em;
+  margin:auto;
+  text-align: center;
+  margin: -5em;
+
+}
+
+.wrap {
+  min-height: calc(100vh - 2.75em);
+}
+
+/* Larger screens */
+
+@media (min-width:320px) {
+/*give some breathing room to everything on the right and left*/
+  .content {
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 100%;
+  }
+
+  /*Header styling*/
+  header h2, header h1 {
+    padding-bottom: .25em;
+    display: inline-block;
+  }
+
+ /* Navigation styling */
+
+
+
+  .main-body {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .quiz-link {
+    width: 60%;
+    float: left;
+    margin-right: 15%;
+  }
+
+  .sidebar {
+    width: 25%;
+  }
+
+  .sidebar a {
+    max-width: 30%;
+
+  }
+
+  .sidebar img{
+    max-width: 100%;
+    margin-bottom: 10px;
+    float: left;
+  }
+
+
+  .quiz img {
+
+  }
+
+  .quiz-option {
+    max-width: 45%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+
+
+  }
+
+  .quiz-option img {
+    border-style: solid;
+    border-width: 10px;
+    border-color: #ddd;
+  }
+
+  .quiz-option input, .quiz-option p  {
+    font-size: 1.25em;
+  }
+
+  .question input[type="radio"] {
+    margin-left: 10px;
+  } .quiz-option:first-of-type {
+    margin-left: 0;
+  }
+
+  .quiz-option:last-of-type {
+    margin-right: 0;
+  }
+
+}
+
+@media (min-width:480px) {
+  .main-nav li {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .main-nav li:first-of-type {
+    padding-left: 0;
+    margin-left: -1.75em;
+  }
+}
+
+@media (min-width:780px) {
+  .profile_photo {
+    display: inline-block;
+    margin-right: 2em;
+  }
+
+  .contact {
+    max-width: 60%;
+    display: inline-block;
+  }
+
+  .about_me {
+    margin-top: 1.5em;
+  }
+
+}

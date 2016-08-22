@@ -1,0 +1,48 @@
+.birds img:hover {
+  border-style: solid;
+  border-width: 10px;
+  border-color: red;
+}
+
+
+.birdlist li {
+  text-decoration: none;
+}
+
+.birdlist li {
+  list-style: none;
+  padding-top: .3em;
+
+}
+
+.birds img {
+  max-width: 100%;
+  display: inline-block;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  margin-left: 1%;
+  margin-right: 1%;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #eee;
+  clear: both;
+
+}
+
+
+.question input[type="radio"] {
+  visibility: hidden;
+}
+
+img:hover {
+  border-color: red;
+}
+
+
+
+<div class="sidebar clearfix">
+  <h2>Featured Birds</h2>
+  <a href="americankestrel.html"><img src="Photos/AmericanKestrel.jpg" alt="American Kestrel" /></a>
+  <a href="bufflehead.html"><img src="Photos/Bufflehead.jpg" alt="Bufflehead" /></a>
+  <a href="redbreastedsapsucker.html"><img src="Photos/RedBreastedSapsucker.jpg" alt="Red Breasted Sapsucker" /></a>
+</div>
