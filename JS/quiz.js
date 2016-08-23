@@ -170,7 +170,7 @@ function yourParagraph() {
     sizeSentence = 'A relatively small bird, the ' + yourBird.name + ' is still fun to spot. '
   }
 
-   yourParagraph= colorSentence + sizeSentence + rareSentence + landSentence;  // set value of yourParagraph to concatenate the four sentences selected above
+   yourParagraph= '<p>' + colorSentence + sizeSentence + rareSentence + landSentence + '</p> </br>';  // set value of yourParagraph to concatenate the four sentences selected above
    return yourParagraph;  // return yourParagraph
  }
 
