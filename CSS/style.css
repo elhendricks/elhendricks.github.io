@@ -65,11 +65,9 @@ nav {
   font-size: 1.5em;
   text-decoration: none;
   display: inline-block;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: .25em;
-  padding-bottom: .25em;
+  padding: .25em 1em;
 }
+
 .main-nav li:hover {
   background-color: white;
 }
@@ -78,7 +76,6 @@ nav {
 .main-body {
   padding-top: 1em;
   padding-bottom: 10em;
-  height: 100%;
 }
 
 .quiz-link img {
@@ -114,7 +111,7 @@ button {
   font-weight: 700;
   margin: auto;
   background-color: #eee;
-  color: #black;
+  color: black;
   border-width: 0px;
   min-width: 200px;
   border-radius: 5px;
@@ -189,7 +186,7 @@ footer {
   padding: 2em;
   margin:auto;
   text-align: center;
-  margin: -5em;
+  margin-top: -5em;
 
 }
 
@@ -227,7 +224,7 @@ footer {
     float: left;
     margin-right: 15%;
   }
-
+/*  Will have side bar on home page in future versions.
   .sidebar {
     width: 25%;
   }
@@ -242,12 +239,7 @@ footer {
     margin-bottom: 10px;
     float: left;
   }
-
-
-  .quiz img {
-
-  }
-
+*/
   .quiz-option {
     max-width: 45%;
     margin-left: 2.5%;
