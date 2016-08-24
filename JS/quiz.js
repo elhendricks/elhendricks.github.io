@@ -1,30 +1,35 @@
-var elQuizForm = document.getElementById('quiz-form');
-var finishFormMsg = "Looks like you didn't fill out the whole form.";
+
+
+
 
 /* variables for each radio button element */
-elColorful = document.getElementById('color_colorful');
-elNeutral = document.getElementById('color_neutral');
-elLarge = document.getElementById('size_large');
-elSmall = document.getElementById('size_small');
-elLand = document.getElementById('land_land');
-elWater = document.getElementById('land_water');
-elRare = document.getElementById('rare_rare');
-elCommon = document.getElementById('rare_common');
+var elColorful = document.getElementById('color_colorful');
+var elNeutral = document.getElementById('color_neutral');
+var elLarge = document.getElementById('size_large');
+var elSmall = document.getElementById('size_small');
+var elLand = document.getElementById('land_land');
+var elWater = document.getElementById('land_water');
+var elRare = document.getElementById('rare_rare');
+var elCommon = document.getElementById('rare_common');
 
 /* objects based on responses selected in the form */
-var color
-var size
-var land
-var rare
+var color;
+var size;
+var land;
+var rare;
 
 /* array of Question objects which holdproperties of question responses from form */
-var questionList
+var questionList;
 
 /* variables to hold sentences made from responses to form*/
 var colorSentence;
 var sizeSentence;
 var landSentence;
 var rareSentence;
+
+
+/* declare a variable to use with form submission event listener*/
+var elQuizForm = document.getElementById('quiz-form');
 
 
 /* Make object for each bird with some basic stats*/
@@ -37,7 +42,7 @@ function Bird(name, colorful, large, land, rare, photoPath) {
     this.rare = rare;
     this.photoPath = photoPath;
     this.valueArray = function() {
-      answerKey = [this.colorful, this.large, this.land, this.rare];
+      var answerKey = [this.colorful, this.large, this.land, this.rare];
       return answerKey;
     };
 }
@@ -111,8 +116,8 @@ if (localStorage.getItem('results') !== null) {                                 
 }
 
 function compileAnswers() {
-var responseArray = []                                  //creates local var to hold empty array (to be populated with questionResponse)
-  for (i = 0; i < questionList.length; i++) {           //for loop to loop through questionList array which holds Question objects
+var responseArray = [];                                 //creates local var to hold empty array (to be populated with questionResponse)
+  for (var i = 0; i < questionList.length; i++) {           //for loop to loop through questionList array which holds Question objects
     var questionResponse = questionList[i].answer();      // create  questionResponse variable to hold return value of answer function from Question object.  If no answer will return  undefined
     var newItem = responseArray.push(questionResponse);   // push questionResponse to end of responseArray.
   }
@@ -130,7 +135,7 @@ function compareAnswers() {
   while (!responseMatch) {                   // loop while responses don't match
       birdName = birdArray[i];                // birdName is birdArray item at [i] index
       birdKey = birdName.valueArray();           // birdKey is array of responses
-      for (j = 0; j < birdKey.length; j++ ) {// loop through array of responses for the bird object
+      for (var j = 0; j < birdKey.length; j++ ) {// loop through array of responses for the bird object
         if (answerArray[j] !== birdKey[j]) {  // if answer from form doesn't match bird's characteristics from birdKey,
           i++;                                 // advance counter for while loop to go through birdArray
           break;                               // stop for loop
@@ -154,7 +159,7 @@ function yourParagraph() {
   }
 
   if (yourBird.rare) {
-    rareSentence = 'This elusive bird is rarely seen on Ross Island or in Oaks Bottom.  The persistent birder who quietly kayaks around the island may catch a glimpse if they are lucky. '
+    rareSentence = 'This elusive bird is rarely seen on Ross Island or in Oaks Bottom.  The persistent birder who quietly kayaks around the island may catch a glimpse if they are lucky. ';
   } else {
     rareSentence = 'A regular party animal, this bird can be frequently seen around Oaks Bottom and Ross Island.  Even amateur birders are likely to see the common ' + yourBird.name + ' if they venture to the park. ';
   }
@@ -165,9 +170,9 @@ function yourParagraph() {
   }
 
   if (yourBird.size) {
-    sizeSentence =  'This bird is one of the larger species in the park. '
+    sizeSentence =  'This bird is one of the larger species in the park. ';
   } else {
-    sizeSentence = 'A relatively small bird, the ' + yourBird.name + ' is still fun to spot. '
+    sizeSentence = 'A relatively small bird, the ' + yourBird.name + ' is still fun to spot. ';
   }
 
    yourParagraph= '<p>' + colorSentence + sizeSentence + rareSentence + landSentence + '</p> </br>';  // set value of yourParagraph to concatenate the four sentences selected above
@@ -223,7 +228,7 @@ function replaceFormWithResults() {
 function validateAnswers() {
   var noUndefined = true;                                                       //  declare local variable to hold whether no responses are undefined and set to true
   var array = compileAnswers();                                                 //  declare  local variable to hold array returned from compileAnswers() which holds user respnoses as booloean values and a value of undefined if the question is not answered
-  for (i = 0; i < array.length; i++) {                                          // use a for loop to loop through each index of array
+  for (var i = 0; i < array.length; i++) {                                          // use a for loop to loop through each index of array
     if (array[i] === undefined) {                                               // if index is undefined
       noUndefined = false;                                                      // set noUndefined to false
       break;                                                                    // and stop the loop;
@@ -234,7 +239,7 @@ function validateAnswers() {
 
 /* create function for what do when form is submitted */
 function formSubmitted() {
-  event.preventDefault;
+  event.preventDefault();
   if (!validateAnswers()) {                                                     // call validateAnswers and if return value is false (not all questions are answered), use an alert to tell user to try again
     alert('Looks like you missed a question.  Please try again for accurate results.');
   } else {                                                                      // else call replaceFormWithResults which calls removeFormContent, createResultsDivContent and replaceFormWithResults
